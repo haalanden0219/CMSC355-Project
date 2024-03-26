@@ -4,8 +4,8 @@
 This is a warehouse storage program that lets a user search through a data base to find a specific item. We are currently working on the project and have plans on adding more user cases. So far we implemented the search and add use cases. In the subsections below we go into more detail about what we worked on and the requirements for each sprint.
 
 ### Testing
-Test 1: This test will use the add use case to check the procedure of adding an item to the warehouse.
-Test 2: This test will use the search use case to check the procedure of looking for an item in the warehouse.
+- Test 1: This test will use the add use case to check the procedure of adding an item to the warehouse.
+- Test 2: This test will use the search use case to check the procedure of looking for an item in the warehouse.
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ We faced a few problems during our first sprint. One of the problems we were fac
 ## Authors
 [Evan Haaland](https://www.linkedin.com/in/evannhaaland/) </br>
 Ishaan Thakur  </br>
-[Nathan Germain](https://www.linkedin.com/in/nathangermain/) </br>
+[Nathan Germain](https://www.linkedin.com/in/nathan-germain/) </br>
 Dylan Kekoa  </br>
 Kelechukwu Onyedeke
 
