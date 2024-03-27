@@ -24,11 +24,14 @@ This is a warehouse storage program that lets a user search through a data base 
 # Workflow/Sprint Schedule (Requirements)
 ## Sprint 1 (due 3/28)
 
+### Overview
+The location class has an array that holds type items.
+
 ### Summary
 The first sprint had us meet as a team to create a program and think about the different use cases we needed to implement. We were required to create 2 use cases as well as test cases to show that they work. We were required to hold team meetings to discuss how we wanted to split up the work. We decided to use a Gui design to help the program be much easier to use for non technical users.
 
 ### Problems Faced
-We faced a few problems during our first sprint. One of the problems we were facing was learning new libraries to use with python. For example, when creating the gui we needed to do research to figure out a library to do so. This meant we had to find a library and reserach the documentation and try to learn from examples.
+We faced a few problems during our first sprint. One of the problems we were facing was learning new libraries to use with python. For example, when creating the gui we needed to do research to figure out a library to do so. This meant we had to find a library and reserach the documentation and try to learn from examples. Another problem was being able to solve bugs that may have came up in someone else's code. This meant we would have to communicate and see what the other person's code was meant to do and why they might have went with that specific method.
 
 ## Authors
 [Evan Haaland](https://www.linkedin.com/in/evannhaaland/) </br>
