@@ -3,6 +3,7 @@ class Location:
         self.row = row
         self.shelf = shelf
         self.bin = bin
-    def myFunc(self):
-        print("Location is Row " + self.row + ", Shelf " + self.shelf + ", Bin " + self.bin + ".")
+        self.items = []
+    def print_out(self):
+        print("Row: " + self.row + "\nShelf: " + self.shelf + "\nBin: " + self.bin)
 

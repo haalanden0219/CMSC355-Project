@@ -4,6 +4,6 @@ class Item:
         self.id = id
         self.quantity = quantity
         self.weight = weight
-    def myFunc(self):
-        print("Item is " + self.name + ", with ID " + self.id + ", with quantity  " + self.quantity + ",  with weight " + self.weight + ".")
+    def print_out(self):
+        print("Item Name: " + self.name + "\nID: " + self.id + "\nQuantity: " + self.quantity + "\nWeight: " + self.weight)
 
