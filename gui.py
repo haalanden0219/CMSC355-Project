@@ -3,7 +3,7 @@ from tkinter import messagebox
 from tkinter import simpledialog
 from Item import Item
 from Location import Location
-from Search import search
+from Search_gui import search
 
 drop_down_menu_options = []
 
