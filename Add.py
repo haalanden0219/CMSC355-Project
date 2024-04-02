@@ -14,5 +14,5 @@ location_row, location_shelf, location_bin = input("Enter location row, shelf, a
 new_location = Location(location_row, location_shelf, location_bin)
 
 # display new Item and Location data
-new_item.myFunc()
-new_location.myFunc()
+new_item.print_out()
+new_location.print_out()
