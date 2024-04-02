@@ -15,6 +15,7 @@ def main():
                 locations.append(Location(f"Row {row}", f"Shelf {shelf}", f"Bin {bin}"))
     add("Box", "3301a", "35", "12", locations[30])
     add("Tape Rolls", "2931c", "5", "2", locations[63])
+    print("Testing the Search function:\n")
     search(locations, "Box", "3301a")
     search(locations, "book", "3301a")
 
