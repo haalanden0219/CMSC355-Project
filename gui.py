@@ -6,16 +6,20 @@ from Location import Location
 from Search_gui import search
 
 drop_down_menu_options = []
+counter = 0
+
 
 def bin_search_button_clicked():
     search_item_name = bin_search_name_entry.get()
     search_item_id = bin_search_id_entry.get()
-    searched_items_list  = search(warehouse_object, search_item_name, search_item_id)
+    searched_items_list = search(warehouse_object, search_item_name, search_item_id)
     for items_to_print in searched_items_list:
         print(items_to_print.print_out())
 
 
 def add_item_button_clicked():
+    global counter
+    counter += 1
     item_name = item_name_entry.get()
     item_id = item_id_entry.get()
     item_quantity = item_quantity_entry.get()
@@ -24,13 +28,14 @@ def add_item_button_clicked():
     new_item = Item(item_name, item_id, item_quantity, item_weight)
     new_item.print_out()
 
-    warehouse_object.items.append(new_item)
-    print(warehouse_object.items)
+    warehouse_object[counter].items.append(new_item)
+    print(warehouse_object[counter].items)
     item_add_success = f"{item_name} is succesfully saved"
-    messagebox.showinfo("Success" , item_add_success )
+    messagebox.showinfo("Success", item_add_success)
+
 
 global warehouse_object
-warehouse_object = Location(1,1,1)
+warehouse_object = [Location(1, 1, 1), Location(1, 1, 2)]
 
 root = tk.Tk()
 root.title("Warehouse Inventory system")

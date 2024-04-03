@@ -5,5 +5,5 @@ class Location:
         self.bin = bin
         self.items = []
     def print_out(self):
-        print("Row: " + self.row + "\nShelf: " + self.shelf + "\nBin: " + self.bin)
+        print("Row: " + str(self.row) + "\nShelf: " + str(self.shelf) + "\nBin: " + str(self.bin))
 
