@@ -18,6 +18,10 @@ def main():
     search(locations, "Box", "3301a")
     search(locations, "book", "3301a")
 
+    print("Testing the Delete Item function:\n")
+    # Delete item function call
+    print("Testing the Check Location function:\n")
+    # Check Location function call
 
 if __name__ == "__main__":
     main()
