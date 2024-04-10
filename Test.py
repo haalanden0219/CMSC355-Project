@@ -2,6 +2,8 @@ from Add import add
 from Search import search
 from Item import Item
 from Location import Location
+from Delete import delete
+from Check_Inventory import 
 
 
 def main():
