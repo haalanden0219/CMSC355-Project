@@ -3,7 +3,7 @@ from Search import search
 from Item import Item
 from Location import Location
 from Delete import delete
-from Check_Inventory import 
+from Check_Inventory import check_inventory 
 
 
 def main():
@@ -22,8 +22,10 @@ def main():
 
     print("Testing the Delete Item function:\n")
     # Delete item function call
+    delete(locations, 5,1,2, "2931c","Tape Rolls")
     print("Testing the Check Location function:\n")
     # Check Location function call
+    check_inventory(locations, 2,1,5)
 
 if __name__ == "__main__":
     main()
