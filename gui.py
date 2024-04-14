@@ -4,10 +4,12 @@ from tkinter import simpledialog
 from Item import Item
 from Location import Location
 from Search_gui import search
+from Delete import delete
+from Check_Inventory import check_inventory
+from Add import add
 
 drop_down_menu_options = []
 counter = 0
-
 
 def bin_search_button_clicked():
     search_item_name = bin_search_name_entry.get()
@@ -19,7 +21,7 @@ def bin_search_button_clicked():
 
 def add_item_button_clicked():
     global counter
-    counter += 1
+   
     item_name = add_item_name_entry.get()
     item_id = add_item_id_entry.get()
     item_quantity = add_item_quantity_entry.get()
@@ -27,18 +29,24 @@ def add_item_button_clicked():
 
     new_item = Item(item_name, item_id, item_quantity, item_weight)
     new_item.print_out()
-
-    warehouse_object[counter].items.append(new_item)
-    print(warehouse_object[counter].items)
+    add(item_name, item_id, item_quantity, item_weight, warehouse_object[counter])
     item_add_success = f"{item_name} is succesfully saved"
     messagebox.showinfo("Success", item_add_success)
+    counter += 1
 
 def delete_item_button_clicked():
-    print("delete button pressed")
+    delete_item_id = delete_item_id_entry.get()
+    delete_item_name = delete_item_name_entry.get()
+    delete_item_row = delete_item_row_entry.get()
+    delete_item_shelf = delete_item_shelf_entry.get()
+    delete_item_bin = delete_item_bin_entry.get()
+    delete( warehouse_object, int(delete_item_row), int(delete_item_shelf) , int(delete_item_bin), delete_item_id, delete_item_name)
 
 def print_location_button_clicked():
-    print("delete button pressed")
-
+    check_inventory_row = check_inventory_row_entry.get()
+    check_inventory_shelf = check_inventory_shelf_entry.get()
+    check_inventory_bin = check_inventory_bin_entry.get()
+    check_inventory(warehouse_object , int(check_inventory_row) , int(check_inventory_shelf), int(check_inventory_bin))
 
 global warehouse_object
 warehouse_object = [Location(1, 1, 1), Location(1, 1, 2)]
@@ -58,6 +66,7 @@ print_location_button = tk.Button(root, text="Print Location", command= print_lo
 bin_search_name_entry = tk.Entry(root)
 bin_search_id_entry = tk.Entry(root)
 
+
 #add_item entry creation
 add_item_name_entry = tk.Entry(root)
 add_item_id_entry = tk.Entry(root)
@@ -67,6 +76,14 @@ add_item_weight_entry = tk.Entry(root)
 #delete_item entry creation
 delete_item_name_entry = tk.Entry(root)
 delete_item_id_entry = tk.Entry(root)
+delete_item_row_entry = tk.Entry(root)
+delete_item_shelf_entry = tk.Entry(root)
+delete_item_bin_entry = tk.Entry(root)
+
+#check inventory entry creation
+check_inventory_row_entry = tk.Entry(root)
+check_inventory_shelf_entry = tk.Entry(root)
+check_inventory_bin_entry = tk.Entry(root)
 
 
 #bin_search label creation
@@ -82,6 +99,14 @@ add_item_weight_label = tk.Label(root, text="Item Weight:")
 #delete_item label creation
 delete_item_name_label = tk.Label(root, text="Item Name:")
 delete_item_id_label = tk.Label(root, text="Item ID:")
+delete_item_row_label = tk.Label(root, text="Row:")
+delete_item_shelf_label = tk.Label(root, text="Shelf:")
+delete_item_bin_label = tk.Label(root, text="Bin:")
+
+#check_inventory
+check_inventory_row_label = tk.Label(root, text="Row:")
+check_inventory_shelf_label = tk.Label(root, text="Shelf:")
+check_inventory_bin_label = tk.Label(root, text="Bin:")
 
 #buttons layout
 bin_search_button.place( x = 300 , y = 300 , width = 100)
@@ -111,5 +136,19 @@ delete_item_name_label.place(x = 400, y = 400 , width=100)
 delete_item_name_entry.place(x = 500, y = 400 , width=100)
 delete_item_id_label.place(x = 600, y = 400 , width=100)
 delete_item_id_entry.place(x = 700, y = 400 , width=100)
+delete_item_row_label.place(x=800, y=400, width=100)
+delete_item_row_entry.place(x=900, y=400, width=100)
+delete_item_shelf_label.place(x=1000, y=400, width=100)
+delete_item_shelf_entry.place(x=1100, y=400, width=100)
+delete_item_bin_label.place(x=1200, y=400, width=100)
+delete_item_bin_entry.place(x=1300, y=400, width=100)
+
+#check_inventory layout
+check_inventory_row_label.place(x = 400, y = 450 , width=100)
+check_inventory_row_entry.place(x = 500, y = 450 , width=100)
+check_inventory_shelf_label.place(x = 600, y = 450 , width=100)
+check_inventory_shelf_entry.place(x = 700, y = 450 , width=100)
+check_inventory_bin_label.place(x = 800, y = 450 , width=100)
+check_inventory_bin_entry.place(x = 900, y = 450 , width=100)
 
 root.mainloop()
