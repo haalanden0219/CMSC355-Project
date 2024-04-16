@@ -1,0 +1,30 @@
+@startuml my simple order request  
+
+
+actor "Project Manager" as ProjectManager
+participant "Bin Search" as Portal
+participant Entry  
+participant AddItems
+database BinDatabase
+
+ProjectManager -> Portal ++ : Orders Request
+group Step: Authentication
+Portal -> Entry ++: Search / item search\nBinSearch Entry
+Entry -> AddItems ++: Authenticate search
+AddItem  --> AddItems : Validate\nSearch
+AddItem -[#blue]> Entry : Suceess, Bin Search item list
+else Authentication Failed
+AddItem ->Entry -- : Request Failed
+Entry -> Portal : Authentication Failure
+Portal ->ProjectManager : Search Bin Again.
+note right : Authentication search has failed
+end
+
+
+group Delete item
+ItemLocation --[#blue]> ItemLocation : Delete item\processing
+group Database Interaction
+ItemLocation -> ItemDatabase ++: Item list
+ItemDatabase -> ItemLocation --: Item
+end
+@enduml
