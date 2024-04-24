@@ -1,13 +1,15 @@
 # CMSC 355 Project - Warehouse Database
 
 ## Description
-This is a warehouse storage program that lets a user search through a data base to find a specific item. We are currently working on the project and have plans on adding more user cases. So far we implemented the search, add, delete, and view use cases. In the subsections below we go into more detail about what we worked on and the requirements for each sprint. The Gui is still in development so some information will still show up in the terminal.
+This is a warehouse storage program that lets a user search through a data base to find a specific item. We are currently working on the project and have plans on adding more user cases. So far we implemented the search, add, delete,update, and view use cases. In the subsections below we go into more detail about what we worked on and the requirements for each sprint. The Gui is still in development so some information will still show up in the terminal.
 
 ### Testing
 - Test 1: This test will use the add use case to check the procedure of adding an item to the warehouse.
 - Test 2: This test will use the search use case to check the procedure of looking for an item in the warehouse.
 - Test 3: This test will use the add use case to check the procedure of deleting an item to the warehouse.
-- Test 4: This test will use the search use case to check the procedure of looking for an item in a specific location.
+- Test 4: This test will use the check use case to check the procedure of looking for an item in a specific location.
+- Test 5: This test will use the update use case to check the procedure of updating a item that has already been stored in a location.
+
 
 ## Getting Started
 
