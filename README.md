@@ -47,6 +47,16 @@ The second sprint had us meet again to break up some of the tasks and discuss ho
 ### Problems Faced
 The first issue we faced was fixing some of the mistakes that we made in the previous sprint. We spent time making the gui more organized so the user can have an easier time working with it. We also needed to rework some of the data structures in our classes so they work with the next set of use cases we have to implement. We also added some comments to seperate parts of the gui to help keep track of each section. Some individuals may have added more comments to help get there point across when sharing ideas with the group.
 
+## Sprint 3 (due 4/25)
+### Overview
+The third sprint had us implement on new test case with a shorter time line. We had to implement a test case, use case, and the updated UML diagram. The first two sprints helped us create a more efficient process to stream line the work so this final sprint went much smoother than we expected.
+
+### Summary
+The third sprint had us start with a team meeting. We discussed how we wanted to implement future changes and any bugs we have encountered in the 2nd sprint. We only had to implement one function this time. We decided to do a update item function that would update the an already existing item with a new value for weight and quantity.
+
+### Problems Faced
+The first problem we faced was working with a stricter time line. We noticed that we had only a week for sprint 3 but we only had to create 1 more test and use case. We decided to come together to figure out the best way to split up the work on a tight deadline. We got a lot better about improving our code readibility for this sprint.
+
 ## Authors
 [Evan Haaland](https://www.linkedin.com/in/evannhaaland/) </br>
 Ishaan Thakur  </br>
