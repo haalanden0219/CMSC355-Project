@@ -1,0 +1,23 @@
+@startuml
+actor user
+participant projectmanager
+database BinDataBase
+
+user -> projectmanager: Order request
+projectmanager -> BinDataBase: Locate Items
+BinDataBase -> projectmanager: Update item
+projectmanager -> user: Show items location
+projectmanager -> user: Show items name
+projectmanager -> user: Show item weight and item quantity
+
+
+group Delete item
+ItemLocation --[#red]> ItemLocation : Delete item\processing
+group Database Interaction
+ItemLocation -> ItemDatabase ++: Item list
+ItemDatabase -> ItemLocation --: Item
+end
+@enduml
+    
+
+
