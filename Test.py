@@ -30,8 +30,9 @@ def main():
 
     print("Testing Update Item function:\n")
     # Test modifying an item that is there
+    update_item(locations,"2931c", "Tape Rolls", "57", "114")
     # Test modifying an item that is not there
-    
+    update_item(locations,"1234c", "Cardstock", "5", "2")
 
 if __name__ == "__main__":
     main()
