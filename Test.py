@@ -4,6 +4,7 @@ from Item import Item
 from Location import Location
 from Delete import delete
 from Check_Inventory import check_inventory 
+from update import update_item
 
 
 def main():
@@ -26,6 +27,11 @@ def main():
     print("Testing the Check Location function:\n")
     # Check Location function call
     check_inventory(locations, 2,1,5)
+
+    print("Testing Update Item function:\n")
+    # Test modifying an item that is there
+    # Test modifying an item that is not there
+    
 
 if __name__ == "__main__":
     main()
